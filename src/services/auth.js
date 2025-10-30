@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const API = "http://localhost:4000/api/auth";
+const API = process.env.NEXT_PUBLIC_API_URL;
 
 export async function login(email, password) {
-  const res = await axios.post(`${API}/login`, { email, password });
+  const res = await axios.post(`${API}/auth/login`, { email, password });
   return res.data;
 }
 
