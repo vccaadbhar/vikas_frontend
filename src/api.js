@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://192.168.31.78:4000/api", // ✅ change to your server URL in production
+  baseURL: process.env.NEXT_PUBLIC_API_URL; // ✅ change to your server URL in production
 });
 
 // Automatically add token to every request
